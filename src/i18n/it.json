@@ -1,0 +1,40 @@
+{
+  "common": {
+    "genericError": "Si è verificato un errore.",
+    "noData": "Nessun dato disponibile.",
+    "successSnackbar": "Operazione completata.",
+    "errorSnackbar": "Errore:",
+    "cancelButton": "Annulla",
+    "deleteButton": "Elimina",
+    "saveButton": "Salva",
+    "editButton": "Modifica",
+    "menu": {
+      "home": "Eroi",
+      "about": "Informazioni"
+    }
+  },
+  "auth": {
+    "loginButton": "Accedi",
+    "logoutButton": "Esci",
+    "loginSnackbar": "{{name}} è entrato.",
+    "logoutSnackbar": "{{name}} è uscito."
+  },
+  "hero": {
+    "title": "Eroi",
+    "newButton": "Nuovo Eroe",
+    "loadSnackbar": "Elenco eroi caricato.",
+    "editDialogTitle": "Edita l'Eroe",
+    "editDialogName": "Nome *",
+    "editDialogGroup": "Gruppo *",
+    "editDialogImage": "Immagine *",
+    "editDialogDescription": "Descrizione",
+    "editSnackbar": "Eroe \"{{name}}\" salvato.",
+    "deleteDialogTitle": "Elimina l'Eroe",
+    "deleteDialogText": "Confermi l'eliminazione dell'Eroe?",
+    "deleteSnackbar": "Eroe \"{{name}}\" eliminato."
+  },
+  "about": {
+    "title": "Informazioni",
+    "text": "Questo è uno starter-kit di React"
+  }
+}

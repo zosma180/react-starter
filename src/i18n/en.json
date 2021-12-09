@@ -1,0 +1,40 @@
+{
+  "common": {
+    "genericError": "An error has occurred.",
+    "noData": "No data available.",
+    "successSnackbar": "Operation completed.",
+    "errorSnackbar": "Error:",
+    "cancelButton": "Cancel",
+    "deleteButton": "Delete",
+    "saveButton": "Save",
+    "editButton": "Edit",
+    "menu": {
+      "home": "Home",
+      "about": "About"
+    }
+  },
+  "auth": {
+    "loginButton": "Login",
+    "logoutButton": "Logout",
+    "loginSnackbar": "{{name}} logged in.",
+    "logoutSnackbar": "{{name}} logged out."
+  },
+  "hero": {
+    "title": "Hero Page",
+    "newButton": "New Hero",
+    "loadSnackbar": "Hero list loaded.",
+    "editDialogTitle": "Edit the Hero",
+    "editDialogName": "Name *",
+    "editDialogGroup": "Group *",
+    "editDialogImage": "Image *",
+    "editDialogDescription": "Description",
+    "editSnackbar": "Hero \"{{name}}\" saved.",
+    "deleteDialogTitle": "Delete the Hero",
+    "deleteDialogText": "Do you confirm the hero deletion?",
+    "deleteSnackbar": "Hero \"{{name}}\" deleted."
+  },
+  "about": {
+    "title": "About Page",
+    "text": "This is a React Starter"
+  }
+}
