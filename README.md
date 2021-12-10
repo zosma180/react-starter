@@ -1,6 +1,6 @@
 # React Starter
 
-A starter React project to provide a ready-to-implement codebase.
+A React starter project to provide a ready-to-implement codebase.
 
 ---
 

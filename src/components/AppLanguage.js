@@ -2,6 +2,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { languageList } from 'i18n';
 
 export default function AppLanguage() {
   const { i18n } = useTranslation();
@@ -14,7 +15,7 @@ export default function AppLanguage() {
   };
 
   // Generate the language buttons
-  const languageButtons = ['en', 'it'].map(value => (
+  const languageButtons = languageList.map(value => (
     <ToggleButton
       key={value}
       value={value}

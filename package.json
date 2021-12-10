@@ -1,13 +1,15 @@
 {
   "name": "react-starter",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "e2e": "cypress run",
-    "e2e-view": "cypress open",
+    "build": "CI=true npm run test && CI=true react-scripts build",
+    "test": "npm run unit && npm run e2e",
+    "unit": "react-scripts test",
+    "e2e": "BROWSER=none start-server-and-test start http://localhost:3000 e2e:run",
+    "e2e:run": "cypress run",
+    "e2e:view": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint src && stylelint src/**/*.css",
     "mock": "jgloo -p 3001"
@@ -18,34 +20,46 @@
     "@fontsource/roboto": "4.5.0",
     "@mui/icons-material": "^5.0.3",
     "@mui/material": "^5.0.3",
-    "@reduxjs/toolkit": "1.6.1",
-    "@testing-library/jest-dom": "5.14.1",
-    "@testing-library/react": "11.2.7",
-    "@testing-library/user-event": "12.8.3",
-    "axios": "0.21.4",
+    "@reduxjs/toolkit": "^1.6.2",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.24.0",
     "i18next": "20.6.1",
-    "lodash.clonedeep": "4.5.0",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "lodash.clonedeep": "^4.5.0",
     "notistack": "2.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-i18next": "11.12.0",
-    "react-redux": "7.2.5",
-    "react-router-dom": "5.3.0",
+    "react-i18next": "^11.14.3",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "1.1.2"
   },
   "devDependencies": {
     "cypress": "^9.1.1",
-    "eslint": "7.32.0",
-    "eslint-config-react-app": "6.0.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-plugin-import": "2.24.2",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.1.0",
-    "eslint-plugin-react": "7.25.1",
-    "eslint-plugin-react-hooks": "4.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "jgloo": "1.5.2",
+    "start-server-and-test": "^1.14.0",
     "stylelint": "^14.1.0",
-    "stylelint-config-standard": "24.0.0"
+    "stylelint-config-standard": "^24.0.0"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
   }
 }

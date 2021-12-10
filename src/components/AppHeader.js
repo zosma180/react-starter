@@ -4,29 +4,22 @@ import { NavLink } from 'react-router-dom';
 import AppLanguage from './AppLanguage';
 import AppUser from './AppUser';
 
-export default function AppMenu() {
+export default function AppHeader() {
   const { t } = useTranslation();
 
   return (
     <Box sx={styles.root}>
       <AppLanguage />
 
-      <section>
-        <NavLink
-          to="/"
-          exact
-          className="app-menu__link"
-        >
+      <Box sx={styles.nav}>
+        <NavLink to="/">
           {t('common.menu.home')}
         </NavLink>
 
-        <NavLink
-          to="/about"
-          sx={styles.link}
-        >
+        <NavLink to="/about">
           {t('common.menu.about')}
         </NavLink>
-      </section>
+      </Box>
 
       <AppUser />
     </Box>
@@ -42,15 +35,17 @@ const styles = {
     position: 'relative',
   },
 
-  link: {
-    boxSizing: 'border-box',
-    color: '#ccc',
-    padding: '20px 30px',
-    textDecoration: 'none',
+  nav: {
+    '& a': {
+      boxSizing: 'border-box',
+      color: '#ccc',
+      padding: '20px 30px',
+      textDecoration: 'none',
 
-    '&.active': {
-      borderBottom: '2px solid white',
-      color: 'white',
+      '&.active': {
+        borderBottom: '2px solid white',
+        color: 'white',
+      },
     },
   },
 };

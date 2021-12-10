@@ -1,25 +1,24 @@
-import AppMenu from './components/AppMenu';
-import { Route, Switch } from 'react-router-dom';
+import AppHeader from './components/AppHeader';
+import { Route, Routes } from 'react-router-dom';
 import AboutPage from 'pages/about/AboutPage';
 import HeroPage from 'pages/hero/HeroPage';
 
 export default function App() {
   return (
     <>
-      <AppMenu />
+      <AppHeader />
 
-      <Switch>
+      <Routes>
         <Route
           path="/"
-          exact
-          children={<HeroPage />}
+          element={<HeroPage />}
         />
 
         <Route
           path="/about"
-          children={<AboutPage />}
+          element={<AboutPage />}
         />
-      </Switch>
+      </Routes>
     </>
   );
 }

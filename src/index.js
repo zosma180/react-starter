@@ -1,15 +1,16 @@
 import { render } from 'react-dom';
 import App from './App';
-import AppProviders from './components/AppProviders';
+import AppProviders from './AppProviders';
 import './i18n';
 import './index.css';
-import init from './init';
 import reportWebVitals from './reportWebVitals';
 
-init().then(() => {
+fetch('/env.json').then(async response => {
+  const env = await response.json();
+
   render(
     <>
-      <AppProviders>
+      <AppProviders env={env}>
         <App />
       </AppProviders>
     </>,
