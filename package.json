@@ -10,8 +10,7 @@
     "e2e": "BROWSER=none start-server-and-test start http://localhost:3000 e2e:run",
     "e2e:run": "cypress run",
     "e2e:view": "cypress open",
-    "eject": "react-scripts eject",
-    "lint": "eslint src && stylelint src/**/*.css",
+    "lint": "eslint src/**/*.js && stylelint src/**/*.css",
     "mock": "jgloo -p 3001"
   },
   "dependencies": {
@@ -42,6 +41,7 @@
     "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-cypress": "2.12.1",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
